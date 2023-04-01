@@ -10,8 +10,13 @@ async function main() {
         _limit: 5,
     };
 
-    const respones = await postApi.getAll(queryParams);
-    console.log(respones);
+    const data = await postApi.getAll(queryParams);
+    console.log(data);
+
+    await postApi.update({
+        id: 'lea11nlelf3n3umv',
+        title: 'Numquam adipisci 1111',
+    });
 }
 
 main();
